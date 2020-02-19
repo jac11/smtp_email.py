@@ -1,4 +1,4 @@
-#/use/bin/python
+#/usr/bin/env python 
 
 
 import smtplib
