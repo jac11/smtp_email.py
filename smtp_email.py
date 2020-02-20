@@ -36,9 +36,9 @@ class Sand_Mail():
             self.Messags_heder()
             self.attached_file()
             self.Send_email()
-                 
+            
       def INFORMATIONS(self):
-          try:
+          try: 
               self.sendder = str(raw_input("\n[#]Enter the Email Sender [FROM]:"))
               time.sleep(2)
               self.Receive =  str(raw_input("\n[#]Enter the Email Receiver [TO] :"))
@@ -107,9 +107,30 @@ class Sand_Mail():
       def Send_email(self):
            try:
                try:
-                 server = smtplib.SMTP(self.smtp_machine,587)
-                 server.starttls()
-                 server.login(self.user_SMTP,self.auth)
+                 print "\n[&]selcet your encryption 'SSL' in port '465'or 'TLS' in port '587' use uppercase[@]"
+                 time.sleep(2)  
+                 option_1 = "TLS".upper()
+                 option_2 = "SSL".upper()
+                 encryption = str(raw_input('[#]\nplease enter you encryption for email "SSL" or "TLS" : '))
+                 time.sleep(2)
+                 if encryption ==option_1:
+                      print"\n[#]the email encryption is :",encryption
+                      time.sleep(2)
+                      server = smtplib.SMTP(self.smtp_machine,587)
+                      server.starttls()
+                      server.login(self.user_SMTP,self.auth)
+                 elif encryption ==option_2:
+                      print"\n[#]the email encryption is :",encryption
+                      time.sleep(2)
+                      server = smtplib.SMTP_SSL(self.smtp_machine,465)
+                      server.login(self.user_SMTP,self.auth)
+                 else:
+                      time.sleep(2)
+                      print"\n(@)SomeThing is wrong try again[]"
+                      time.sleep(2)
+                      print"[%]\nencryption  is SSL or TLS",encryption ,"not found"
+                      time.sleep(2)
+                      return self.Send_email()
                  if self.input =='Y':
                     server.sendmail(self.sendder, self.Receive ,self.message)
                     server.quit()
@@ -154,4 +175,3 @@ class Sand_Mail():
                                               
 if __name__=='__main__':
      Sand_Mail()
-
