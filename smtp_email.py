@@ -11,16 +11,13 @@ import imghdr
 import time 
 import os 
 
-
-
 class Sand_Mail():
       
       import atexit
       import os
       import readline
       import rlcompleter
-      
-      
+           
       historyPath = os.path.expanduser("~/.EMAIL_HISTORY")
       def save_history(historyPath=historyPath):
              import readline
