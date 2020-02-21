@@ -10,7 +10,7 @@ the hidden file location at  home directory
 * smtp_email.py allow to attach file 
 * attach singel file not multiple  file
 * to attach file you change the current working directory same like /root/Desktop/
-* after you chamge the current work directory smtp_email.py will ask you to Enter the file name 
+* after you change the current work directory smtp_email.py will ask you to Enter the file name 
 ## Sendgrid
 * you can  use sendgrid Smtp login user name and API-KEY with out import extra module
 ## spoofing email
