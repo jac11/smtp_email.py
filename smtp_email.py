@@ -11,7 +11,7 @@ import imghdr
 import time 
 import os 
 
-class Sand_Mail():
+class Send_Mail():
       
       import atexit
       import os
@@ -171,4 +171,4 @@ class Sand_Mail():
                                  
                                               
 if __name__=='__main__':
-     Sand_Mail()
+     Send_Mail()
